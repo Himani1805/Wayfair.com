@@ -7,6 +7,7 @@ const {connectToDB} = require('./src/Config/db');
 const { authRouter } = require('./src/Routes/auth.route');
 const { userRouter } = require('./src/Routes/user.route');
 const { authorization } = require('./src/Middleware/auth.middleware');
+const { productRouter } = require('./src/Routes/product.route');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
+app.use('/api/product', productRouter);
 
 app.use('/test', authorization(['admin']), (req, res, next)=>{
     res.status(200).json({message:'Welcome to admin page!'});   
