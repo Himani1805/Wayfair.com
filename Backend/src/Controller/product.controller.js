@@ -14,8 +14,16 @@ const addProduct = async (req, res, next) => {
 
 const readAllProduct = async (req, res, next) => {
     try {
-        const productList = await productModel.find();
-        return res.status(200).json({data:productList})       
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const skip = (page - 1) * limit;
+        const productList = await productModel.find().skip(skip).limit(limit);
+        const total = await productModel.countDocuments();
+        return res.status(200).json({
+            total,
+            page,
+            pages: Math.ceil(total / limit),
+            data:productList})       
     } catch (error) {
         console.log(error);   
     }  
@@ -35,7 +43,7 @@ const updateProduct = async (req, res, next) => {
     try {
         const id = req.params.id;
         const updateProduct = await productModel.findByIdAndUpdate(id, req.body, {new:"true"});
-        return res.status(200).json({message:'Product Updated successfully!', data:updateProduct});      
+        return res.status(200).json({message:'Product Updated successfully!'});      
     } catch (error) {
         console.log(error);    
     } 
