@@ -22,7 +22,7 @@ export default function Header() {
           <SearchBar />
         </Flex>
         <Flex width={"15%"}>
-            <Link><MdOutlineAccountCircle />  Account</Link>
+            <Link href=""><MdOutlineAccountCircle />  Account</Link>
             <Link><AiOutlineShoppingCart />Cart</Link>
         </Flex>
 

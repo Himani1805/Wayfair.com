@@ -6,6 +6,7 @@ import axios from 'axios';
 import  backendUrl  from '../config/config';
 
 export default function Signup() {
+  const [error, setError] = useState("")
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -15,9 +16,11 @@ export default function Signup() {
 
   async function handleSignup() {
     try {
-      let res = await axios.post(`${backendUrl}/auth/signup`, data);
+      let res = await axios.post(`${backendUrl}/auth/signup`, data, {withCredentials:true});
+      let response = await res.data;
+      window.alert(response.message)
     } catch (err) {
-      console.error(err);
+      window.alert(err.response.data.message);
     }
   }
 

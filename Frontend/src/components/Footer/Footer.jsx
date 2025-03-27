@@ -16,6 +16,9 @@ import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { MdOutlineWatchLater } from "react-icons/md";
+import { IoCallOutline } from "react-icons/io5";
+import FloatingButtons from "./FloatingButtons";
 
 export default function Footer() {
   return (
@@ -25,7 +28,7 @@ export default function Footer() {
           style={{
             width: "1510px",
             border: "1px solid #dcdcdc",
-            margin: "5px 0",
+            margin: "2px 0",
           }}
         />
       </Box>
@@ -33,26 +36,34 @@ export default function Footer() {
         <Box>
           <Image src="src\assets\images\attention,_waybors!_dDon't_miss_exclusive_deals_and_perks_on_the_app._download_the_app.jpg" />
         </Box>
-        <Box>
-          <Heading>Be the first to know about our best deals!</Heading>
-          <Link href="wayfairRewards">Privacy Policy</Link>
-        </Box>
-        <Box
-          as="form"
-          action="/action_page.php"
-          p={5}
-          border="1px"
-          borderColor="gray.300"
-          borderRadius="md"
-        >
-          <Heading as="legend" size="md" mb={4}>
-            Personalia:
-          </Heading>
+        <Flex justifyContent={"center"} paddingTop={"50px"} gap={"20px"} textAlign={"center"}>
+          <Box lineHeight={"60px"}>
+            <Heading fontWeight={"700"}>Be the first to know about our best deals!</Heading>
+            <List.Root listStyleType={"none"}>
+              <List.Item>
+                <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }} >Privacy Policy</Link>
+              </List.Item>
+            </List.Root>
+          </Box>
+          <Box
+            as="form"
+            action="/action_page.php"
+            display="flex" 
+            paddingTop={"20px"}
+          >
+            <Input
+              placeholder="Email address"
+              color="white"
+              border="1px solid white"
+              bg="transparent"
+              width="300px"
+            />
+            <Button bg="purple" color="white" border="1px solid purple" _hover={{ bg: "darkpurple" }}>
+              Submit
+            </Button>
+          </Box>
+        </Flex>
 
-          <Button type="submit" colorScheme="teal">
-            Submit
-          </Button>
-        </Box>
       </Flex>
       <Box>
         <hr
@@ -63,105 +74,108 @@ export default function Footer() {
           }}
         />
       </Box>
-      <Flex justifyContent={"spaceEvenly"} gap={"100px"}>
-        <Box>
-          <Heading>About Us</Heading>
-          <List.Root listStyleType={"none"}>
+      <Flex width={"100%"} justifyContent={"space-evenly"} lineHeight={"35px"} padding={"20px 60px"}  >
+        <Box width={"33%"}>
+          <Heading fontSize={"24px"} fontWeight={"700"}>About Us</Heading>
+          <List.Root listStyleType={"none"} >
             <List.Item>
-              <Link href="aboutWayfair">About Wayfair</Link>
+              <Link href="aboutWayfair" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>About Wayfair</Link>
             </List.Item>
             <List.Item>
-              <Link href="wayfairRewards">Wayfair Rewards</Link>
+              <Link href="wayfairRewards" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Wayfair Rewards</Link>
             </List.Item>
             <List.Item>
-              <Link href="wayfairProfessional">Wayfair Professional</Link>
+              <Link href="wayfairProfessional" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Wayfair Professional</Link>
             </List.Item>
             <List.Item>
-              <Link href="designServices">Design Services</Link>
+              <Link href="designServices" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Design Services</Link>
             </List.Item>
             <List.Item>
-              <Link href="giftCards">Gift Cards</Link>
+              <Link href="giftCards" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Gift Cards</Link>
             </List.Item>
             <List.Item>
-              <Link href="wayfairCreditCard">Wayfair Credit Card</Link>
+              <Link href="wayfairCreditCard" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Wayfair Credit Card</Link>
             </List.Item>
             <List.Item>
-              <Link href="wafairFinancing">Wayfair Financing</Link>
+              <Link href="wafairFinancing" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Wayfair Financing</Link>
             </List.Item>
             <List.Item>
-              <Link href="productCollections">Product Collections</Link>
+              <Link href="productCollections" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Product Collections</Link>
             </List.Item>
             <List.Item>
-              <Link href="careers">Careers</Link>
+              <Link href="careers" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Careers</Link>
             </List.Item>
             <List.Item>
-              <Link href="sellOnWayfair">Sell on Wayfair</Link>
+              <Link href="sellOnWayfair" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Sell on Wayfair</Link>
             </List.Item>
             <List.Item>
-              <Link href="creators">Creators</Link>
+              <Link href="creators" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Creators</Link>
             </List.Item>
             <List.Item>
-              <Link href="investorRelations">Investor Relations</Link>
+              <Link href="investorRelations" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Investor Relations</Link>
             </List.Item>
             <List.Item>
-              <Link href="advertiseWithUs">Advertise With Us</Link>
+              <Link href="advertiseWithUs" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Advertise With Us</Link>
             </List.Item>
             <List.Item>
-              <Link href="locations">Locations</Link>
+              <Link href="locations" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Locations</Link>
             </List.Item>
           </List.Root>
         </Box>
-        <Box>
-          <Heading>Customer Service</Heading>
-          <List.Root listStyleType={"none"}>
+        <Box width={"33%"}>
+          <Heading fontSize={"24px"} fontWeight={"700"}>Customer Service</Heading>
+          <List.Root listStyleType={"none"} >
             <List.Item>
-              <Link href="myOrders">My Orders</Link>
+              <Link href="myOrders" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>My Orders</Link>
             </List.Item>
             <List.Item>
-              <Link href="myAccount">My Account</Link>
+              <Link href="myAccount" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>My Account</Link>
             </List.Item>
             <List.Item>
-              <Link href="trackMyOrder">Track My Order</Link>
+              <Link href="trackMyOrder" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Track My Order</Link>
             </List.Item>
             <List.Item>
-              <Link href="wayfairAccessibilityStatement">
+              <Link href="wayfairAccessibilityStatement" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>
                 Wayfair Accessibility Statement
               </Link>
             </List.Item>
             <List.Item>
-              <Link href="returnPolicy">Return Policy</Link>
+              <Link href="returnPolicy" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Return Policy</Link>
             </List.Item>
             <List.Item>
-              <Link href="helpCenter">Help Center</Link>
+              <Link href="helpCenter" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Help Center</Link>
             </List.Item>
             <List.Item>
-              <Link href="ideasAdvice">Ideas & Advice</Link>
+              <Link href="ideasAdvice" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Ideas & Advice</Link>
             </List.Item>
             <List.Item>
-              <Link href="productRecalls">Product Recalls</Link>
+              <Link href="productRecalls" _hover={{ textDecoration: "underline", textDecorationColor: "purple.500" }}>Product Recalls</Link>
             </List.Item>
           </List.Root>
         </Box>
-        <Box>
-          <Heading>Contact Us</Heading>
-          <Button>Quick Help</Button>
-          <br />
-          <br />
-          <Button>Call Us</Button>
-          <Heading>Customer Service</Heading>
-          <Text>Open. Closes at 11:59 PM ET.</Text>
-          <List.Root listStyleType={"none"}>
-            <List.Item>
-              <Link href="myOrders">Weekly Hours</Link>
-            </List.Item>
-          </List.Root>
-          <Heading>Shopping Assistance</Heading>
-          <Text>Open. Closes at 11:59 PM ET.</Text>
-          <List.Root listStyleType={"none"}>
-            <List.Item>
-              <Link href="myOrders">Weekly Hours</Link>
-            </List.Item>
-          </List.Root>
+        <Box width={"33%"}>
+          <Heading fontSize={"24px"} fontWeight={"700"} marginBottom={"10px"}>Contact Us</Heading>
+          <Box >
+            <Button background={"#7c189f"} borderRadius={"40px"} padding={" 22px 28px"} marginBottom={"10px"}><MdOutlineWatchLater />Quick Help</Button>
+            <br />
+            <Button color={"black"} background={"white"} marginBottom={"10px"} padding={" 22px 40px"} border={"1px solid #7c189f "} borderRadius={"30px"}><IoCallOutline />Call Us</Button>
+          </Box>
+          <Box>
+            <Heading fontWeight={"600"}>Customer Service</Heading>
+            <Text>Open. Closes at 11:59 PM ET.</Text>
+            <List.Root listStyleType={"none"}>
+              <List.Item>
+                <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }}>Weekly Hours</Link>
+              </List.Item>
+            </List.Root>
+            <Heading fontWeight={"600"}>Shopping Assistance</Heading>
+            <Text>Open. Closes at 11:59 PM ET.</Text>
+            <List.Root listStyleType={"none"}>
+              <List.Item>
+                <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }} >Weekly Hours</Link>
+              </List.Item>
+            </List.Root>
+          </Box>
         </Box>
       </Flex>
       <Box>
@@ -169,37 +183,36 @@ export default function Footer() {
           style={{
             width: "1510px",
             border: "1px solid #dcdcdc",
-            margin: "20px 0",
+            margin: "5px 0"
           }}
         />
       </Box>
-
-      <Flex flexDirection={"column"}>
-        <Flex>
+      <Flex flexDirection={"column"} width={"100%"} justifyContent={"space-evenly"} gap={"15px"} padding={"20px 60px"} >
+        <Flex fontSize={"30px"} gap={"20px"}>
           <Link href="w">JOSS & MAIN</Link>
           <Link href="w">
             ALL <strong>MODERN</strong>
           </Link>
           <Link href="w">BIRCHLN</Link>
         </Flex>
-        <br />
-        <Flex width={"100%"}>
-          <ImFacebook2 width={"60%"} />
-          <FaPinterest />
-          <FaInstagram />
-          <FaTiktok />
-          <FaYoutube />
+        <Flex width={"100%"} gap={"20px"}>
+          <ImFacebook2 size={20} color="#791999" />
+          <FaPinterest size={20} color="#791999" />
+          <FaInstagram size={20} color="#791999" />
+          <FaTiktok size={20} color="#791999" />
+          <FaYoutube size={20} color="#791999" />
         </Flex>
-        <br />
-        <Box>
+        <Flex gap={"20px"} fontWeight={"500"}>
           <Link href="wayfairRewards">Terms of Use</Link>
           <Link href="wayfairRewards">Your Privacy Rights & Choices</Link>
           <Link href="wayfairRewards">Privacy Policy</Link>
-        </Box>
-        <br />
-        <Text>
+        </Flex>
+        <Text fontSize={"13px"}>
           © 2025 by Wayfair LLC, 4 Copley Place, 7th Floor, Boston, MA 02116
         </Text>
+      </Flex>
+      <Flex>
+        <FloatingButtons />
       </Flex>
     </VStack>
   );

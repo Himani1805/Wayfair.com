@@ -1,6 +1,6 @@
 import { Box, Button, Checkbox, Flex, Heading, Input, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import backendUrl from '../config/config';
 
@@ -9,20 +9,19 @@ export default function Login() {
     email: "",
     password: ""
   });
+  const navigate = useNavigate()
 
   async function handleLogin() {
     
     const url = `${backendUrl}/auth/login`
-    console.log( "Himani", url)
     try {
-      let res = await axios.post("http://localhost:8081/api/auth/test", {name:"himani"});
+      let res = await axios.post("http://localhost:8081/api/auth/login", data, {withCredentials:true});
+      let result = await res.data;
       // const res = await axios.post(`${backendUrl}/auth/login`, data, { withCredentials: true });
-      console.log(res.data);
-      // let res = await axios.post(url);
-      // let res = await axios.post(`${backendUrl}/auth/login`, data);
-      console.log("Himani", res)
+      window.alert(result.message)
+      navigate("/")
     } catch (err) {
-      console.error(err);
+      window.alert(err.response.data.message);
     }
   }
 

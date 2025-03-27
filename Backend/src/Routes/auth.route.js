@@ -1,10 +1,11 @@
-const { signUpUser, logInUser, logOutUser } = require('../Controller/auth.controller');
+const { signUpUser, logInUser, logOutUser, testUser } = require('../Controller/auth.controller');
 
 const authRouter = require('express').Router();
 
 
 authRouter.post('/signup', signUpUser );
 authRouter.post('/login', logInUser );
-authRouter.delete('/:id', logOutUser);
+authRouter.delete('/logout', logOutUser);
+authRouter.post('/test', testUser);
 
 module.exports = {authRouter};

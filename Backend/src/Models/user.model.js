@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    name: {type:String, require:true},
+    firstName: {type:String, require:true},
+    lastName: {type:String, require:true},
     email: {type:String, require:true, unique:true},
     password: {type:String, require:true},
     phone: {type:String, require:true},
@@ -9,7 +10,7 @@ const UserSchema = new mongoose.Schema({
     role:{type:String, enum:['admin', 'seller', 'customer'],default:'customer'},
     cart:[{ type:mongoose.Schema.Types.ObjectId, ref:'product'}],
     wishlist:[{ type:mongoose.Schema.Types.ObjectId, ref:'product'}],
-    gender:{type:String, enum:['male', 'female', 'other'],default:'customer'}
+    gender:{type:String}
     
 }, {versionKey:false, timestamps:true});
 

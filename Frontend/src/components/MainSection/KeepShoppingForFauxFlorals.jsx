@@ -11,11 +11,10 @@ import React from "react";
 
 export default function KeepShoppingForFauxFlorals() {
   return (
-    <VStack>
+    <VStack >
       <Flex flexDirection={"column"}>
-        <Box>
-          <Heading>keep shopping for faux florals</Heading>
-        </Box>
+       
+          <Heading  width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"15px"}>Keep Shopping For Faux Florals</Heading>
         <Flex>
           <Box>
             <Image src="https://assets.wfcdn.com/im/74544012/resize-h400-w400%5Ecompr-r85/1248/124820897/Peony+Arrangement.jpg" />

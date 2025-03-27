@@ -13,10 +13,11 @@ import RecommendedForYou from './RecommendedForYou'
 import DiningSaleUpto from './DiningSaleUpto'
 import AllCategories from './AllCategories'
 import Banner from './Banner'
+import { Flex } from '@chakra-ui/react'
 
 export default function Main() {
   return (
-    <div>
+    <Flex width={"92%"} border={"2px solid red"} mx={"auto"} flexDirection={"column"}>
       <Banner/>
       <AllCategories/>
       <DiningSaleUpto/>
@@ -31,6 +32,6 @@ export default function Main() {
       <KeepShoppingForFauxFlorals/>
       <ExploreOurExclusiveBrands/>
       <ShopByDepartment/>
-    </div>
+    </Flex>
   )
 }
