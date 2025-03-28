@@ -12,13 +12,12 @@ import HoursOnlyDealsOfTheDay from './HoursOnlyDealsOfTheDay'
 import RecommendedForYou from './RecommendedForYou'
 import DiningSaleUpto from './DiningSaleUpto'
 import AllCategories from './AllCategories'
-import Banner from './Banner'
+import Banner from '../Dashboard/Banner'
 import { Flex } from '@chakra-ui/react'
 
 export default function Main() {
   return (
-    <Flex width={"92%"} border={"2px solid red"} mx={"auto"} flexDirection={"column"}>
-      <Banner/>
+    <Flex width={"92%"}  mx={"auto"} flexDirection={"column"}>
       <AllCategories/>
       <DiningSaleUpto/>
       <RecommendedForYou/>

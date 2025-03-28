@@ -11,12 +11,12 @@ import React from "react";
 
 export default function KeepShoppingForBathTowels() {
   return (
-    <VStack>
+    <VStack my={"20px"}>
       <Flex>
         <Flex flexDirection={"column"}>
-          <Box>
-            <Heading>keep shopping for bath towels</Heading>
-          </Box>
+         
+            <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>keep shopping for bath towels</Heading>
+      
           <Flex>
             <Box>
               <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />
@@ -92,8 +92,8 @@ export default function KeepShoppingForBathTowels() {
         </Flex>
         
       </Flex>
-      <Flex>
-          <Image src="https://assets.wfcdn.com/im/37860705/resize-h454-w2000%5Ecompr-r85/3308/330843620/easy._living_room._updates._lounge_like_you_mean_it_330843620.jpg" />
+      <Flex  _hover={{ border: "1px solid gray", bg: "#f3f6f4", borderRadius: "5px" }} p={"10px"}>
+          <Image src="https://assets.wfcdn.com/im/37860705/resize-h454-w2000%5Ecompr-r85/3308/330843620/easy._living_room._updates._lounge_like_you_mean_it_330843620.jpg" borderRadius={"5px"} />
       </Flex>
     </VStack>
   )

@@ -15,7 +15,7 @@ export default function KeepShoppingForFauxFlorals() {
       <Flex flexDirection={"column"}>
        
           <Heading  width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"15px"}>Keep Shopping For Faux Florals</Heading>
-        <Flex>
+        <Flex width={"100%"} gap={"20px"}>
           <Box>
             <Image src="https://assets.wfcdn.com/im/74544012/resize-h400-w400%5Ecompr-r85/1248/124820897/Peony+Arrangement.jpg" />
             <Link href="wayfairRewards">Peony Arrangements</Link>
@@ -83,8 +83,10 @@ export default function KeepShoppingForFauxFlorals() {
             <Heading>$41.99</Heading>
             <Text>was$59.99</Text>
           </Box>
+         
         </Flex>
       </Flex>
+      
     </VStack>
   );
 }

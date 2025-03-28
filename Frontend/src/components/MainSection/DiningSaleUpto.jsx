@@ -6,6 +6,7 @@ import {
   Link,
   Text,
   VStack,
+  List
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -14,12 +15,14 @@ export default function DiningSaleUpto() {
     <VStack>
       <Flex>
         <Flex flexDirection={"column"}>
-          <Box>
-            <Heading>Dining Sale: up to 50% OFF</Heading>
-            <Link href="wayfairRewards">See all
-            </Link>
-
-          </Box>
+          <Flex justifyContent={"space-evenly"}>
+            <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>Dining Sale: up to 50% OFF</Heading>
+            <List.Root listStyleType={"none"} width={"5%"}>
+              <List.Item>
+                <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }} >See all</Link>
+              </List.Item>
+            </List.Root>
+          </Flex>
           <Flex>
             <Box>
               <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />

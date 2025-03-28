@@ -1,4 +1,5 @@
-import { Box, Flex, Text, Link, Stack, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Link, Menu, useDisclosure } from "@chakra-ui/react";
+
 // import { Collapse } from "@chakra-ui/transition";
 import { menuData } from "../../data/menuData";
 import MegaMenu from "./MegaMenu";
@@ -10,15 +11,13 @@ const Navbar = () => {
 
   return (
     <Box bg="white" boxShadow="sm" w="100%">
-      <Flex px={4} py={3} align="center" justify="space-between">
-        <Text fontWeight="bold" fontSize="xl" color="purple.500">Wayfair</Text>
-        
+      <Flex px={4} py={3} align="center" justify="center">
         <Flex display={{ base: "none", md: "flex" }}>
           {menuData.map((menu, idx) => (
             <Box
               key={idx}
               position="relative"
-              mx={4}
+              mx={2}
               onMouseEnter={() => setHoveredMenu(menu.subItems ? idx : null)}
               onMouseLeave={() => setHoveredMenu(null)}
             >
@@ -35,6 +34,7 @@ const Navbar = () => {
 
      
     </Box>
+
   );
 };
 
@@ -102,5 +102,4 @@ export default Navbar;
 //     </Box>
 //   );
 // };
-
 

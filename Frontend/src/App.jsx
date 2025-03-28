@@ -7,12 +7,14 @@ import Footer from "./components/Footer/Footer"
 import Main from "./components/MainSection/Main"
 import Navbar from "./components/Navbar/Navbar"
 import Logout from "./pages/Logout"
+import Dashboard from "./components/Dashboard/Banner"
 
 function App() {
   return (
     <VStack width={"100%"}>
       <Header/>
       <Navbar/>
+      <Dashboard/>
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

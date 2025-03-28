@@ -1,61 +1,47 @@
-import { Box, Flex, Image, VStack } from '@chakra-ui/react'
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useState, useEffect } from "react";
+import { Box, Button, Image, Text, Flex } from "@chakra-ui/react";
 
-export default function ProductsSlider() {
-  const [data, setData]=useState([])
-  const [loading, setLoading]= useState(false)
+const ProductSlider = ({ products }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  async function getProduct(){
-    const options = {
-      method: 'GET',
-      url: 'https://myntra-data.p.rapidapi.com/search_with_id/22451388',
-      headers: {
-        'x-rapidapi-key': '97e4f182f3msh02678cb69b9377dp11d6d8jsn8bb7447a7f5f',
-        'x-rapidapi-host': 'myntra-data.p.rapidapi.com'
-      }
-    };
-    
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
+  };
 
-    try {
-      setLoading (true)
-      // let res = await axios.get('https://myntra-data.p.rapidapi.com', {
-      //   headers: {
-      //     'x-rapidapi-host': 'myntra-data.p.rapidapi.com',
-      //     'x-rapidapi-key': '97e4f182f3msh02678cb69b9377dp11d6d8jsn8bb7447a7f5f'
-      //   }
-      // });
-      const response = await axios.request(options);
-      console.log(response.data);
-      setData(res?.data);
-      setLoading(false)
-    } catch (error) {
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length);
+  };
 
-      setLoading(false)
-    }
-  }
-  useEffect(()=>{
-    getProduct()
-  }, [])
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
-
-    <VStack>
-      <Flex width={'100%'} flexWrap={'wrap'} justifyContent={'space-evenly'} textAlign={'center'}>
-        {
-          data.map((ele,i)=>{
-            return(
-              <Flex key={i} width={'20%'} gap={'20%'}  flexDirection={'column'} justifyContent={'space-evenly'} boxShadow={'box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px'} padding={'10px'} alignItems={'center'} >
-                <Image src={ele.images[0]} width={'300px'} border={'2px solid red'}/>
-                <h2>{ele.title}</h2>
-                <h1>{ele.category["name"]}</h1>
-                <h3>{ele.price}</h3>
-              </Flex>
-            )
-
-          })
-        }
+    <Box position="relative" w="full" maxW="600px" mx="auto" overflow="hidden" p={4}>
+      <Flex justify="center" align="center">
+        {products.map((product, index) => (
+          <Box
+            key={product.id}
+            display={index === currentIndex ? "block" : "none"}
+            textAlign="center"
+            transition="opacity 0.5s ease-in-out"
+          >
+            <Image src={product.image} alt={product.name} boxSize="300px" objectFit="cover" mx="auto" />
+            <Text mt={2} fontSize="lg" fontWeight="bold">
+              {product.name}
+            </Text>
+          </Box>
+        ))}
       </Flex>
-    </VStack>
-  )
-}
+      <Button position="absolute" left="0" top="50%" transform="translateY(-50%)" onClick={prevSlide}>
+        {"<"}
+      </Button>
+      <Button position="absolute" right="0" top="50%" transform="translateY(-50%)" onClick={nextSlide}>
+        {">"}
+      </Button>
+    </Box>
+  );
+};
+
+export default ProductSlider;

@@ -11,12 +11,12 @@ import {
 
 export default function ShopTheLook() {
   return (
-    <VStack>
+    <VStack my={"20px"}>
           <Flex>
             <Flex flexDirection={"column"}>
-              <Box>
-                <Heading>small space entryway finds</Heading>
-              </Box>
+             
+                <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>Shop The Look</Heading>
+             
               <Flex>
                 <Box>
                   <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />
@@ -47,7 +47,7 @@ export default function ShopTheLook() {
                   <Text>$13.00 per item was$64.92</Text>
                 </Box>
     
-                <Box>
+                <Box >
                   <Image src="https://assets.wfcdn.com/im/65235432/resize-h400-w400%5Ecompr-r85/2886/288676860/Norvun+39.4%27%27+Console+Table.jpg" />
                   <Link href="wayfairRewards">Poppy Arrangements</Link>
                   <Heading>$13.99</Heading>
@@ -91,11 +91,11 @@ export default function ShopTheLook() {
               </Flex>
             </Flex>
           </Flex>
-          <Flex>
-            <Image src="https://assets.wfcdn.com/im/20092386/resize-h454-w2000%5Ecompr-r85/3354/335444395/get_5%25_rewards...on_every_item%2C_always_335444395.jpg" />
+          <Flex _hover={{ border: "1px solid gray", bg: "#f3f6f4", borderRadius: "5px" }} p={"10px"}>
+            <Image src="https://assets.wfcdn.com/im/20092386/resize-h454-w2000%5Ecompr-r85/3354/335444395/get_5%25_rewards...on_every_item%2C_always_335444395.jpg" borderRadius={"5px"} />
           </Flex>
-          <Flex>
-          <Image src="https://assets.wfcdn.com/im/96184247/resize-h454-w2000%5Ecompr-r85/3306/330682766/organize._simplify._enjoy._shop_storage_and_organization_330682766.jpg" />
+          <Flex _hover={{ border: "1px solid gray", bg: "#f3f6f4", borderRadius: "5px" }} p={"10px"}>
+          <Image src="https://assets.wfcdn.com/im/96184247/resize-h454-w2000%5Ecompr-r85/3306/330682766/organize._simplify._enjoy._shop_storage_and_organization_330682766.jpg" borderRadius={"5px"} />
           </Flex>
         </VStack>
   )

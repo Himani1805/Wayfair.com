@@ -14,9 +14,9 @@ export default function HoursOnlyDealsOfTheDay() {
     <VStack>
       <Flex>
         <Flex flexDirection={"column"}>
-          <Box>
-            <Heading>24-hours ONLY: deals of the day</Heading>
-          </Box>
+         
+            <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>24-hours ONLY: Deals of the day</Heading>
+       
           <Flex>
             <Box>
               <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />

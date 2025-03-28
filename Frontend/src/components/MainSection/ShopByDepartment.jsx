@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function ShopByDepartment() {
   return (
-    <VStack my={"60px"}>
-        <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"15px"}>Shop By Department</Heading>
+    <VStack my={"40px"}>
+        <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"}>Shop By Department</Heading>
         <Flex width={"100%"} flexWrap={"wrap"} justifyContent={"center"} m={"0px 40px 0px 40px"}>
             <Box  width={"14%"} lineHeight={"50px"} _hover={{boxShadow:" rgba(0, 0, 0, 0.24) 0px 3px 8px", border:"1px solid black", bg:"#f3f6f4"}} p={"10px"} borderRadius={"10px"} >
                 <Image src="https://assets.wfcdn.com/im/58159492/scale-h233-w233%5Ecompr-r85/8535/85357250/default_name.jpg" />

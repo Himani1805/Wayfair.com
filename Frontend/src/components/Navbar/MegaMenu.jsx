@@ -2,7 +2,7 @@ import { Box, Flex, Text, Stack, Link } from "@chakra-ui/react";
 import React from 'react'
 
 const MegaMenu = ({ subItems }) => (
-  <Box p={4} bg="white" shadow="md" borderRadius="md">
+  <Box p={4} bg="white" shadow="md" borderRadius="md" >
     <Flex>
       {subItems.map((column, idx) => (
         <Box key={idx} mr={10} minW="150px">

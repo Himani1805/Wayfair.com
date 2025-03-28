@@ -12,7 +12,7 @@ import React from "react";
 
 export default function ExploreOurExclusiveBrands() {
   return (
-    <VStack my={"60px"}>
+    <VStack >
       <Flex flexDirection={"column"}>
         <Box lineHeight={"40px"} marginLeft={"15px"}>
           <Heading width={'100%'} textAlign={"left"} fontWeight={"700"}>Explore Our Exclusive Brands</Heading>

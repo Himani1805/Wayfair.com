@@ -182,6 +182,10 @@ export default function AllCategories() {
           </Flex>
         ))}
       </Grid>
+      <br />
+      <Flex _hover={{ border: "1px solid gray", bg: "#f3f6f4", borderRadius: "5px" }} p={"10px"} >
+        <Image src="https://assets.wfcdn.com/im/07098553/resize-h208-w2000%5Ecompr-r85/3279/327974406/wayfair_professional%3A_unlock_pro_pricing_up_to_15%25_off%2C_plus_more_benefits._join_for_free_327974406.jpg" borderRadius={"5px"}  />
+      </Flex>
     </Box>
   );
 }

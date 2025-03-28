@@ -14,9 +14,9 @@ export default function RecommendedForYou() {
     <VStack>
       <Flex>
         <Flex flexDirection={"column"}>
-          <Box>
-            <Heading>Recommended for you</Heading>
-          </Box>
+        
+            <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>Recommended for you</Heading>
+          
           <Flex>
             <Box>
               <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />
