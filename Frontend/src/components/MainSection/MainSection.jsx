@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopByDepartment from './shopByDepartment'
+import ShopByDepartment from './ShopByDepartment'
 import ExploreOurExclusiveBrands from './ExploreOurExclusiveBrands.JSX'
 import KeepShoppingForFauxFlorals from './KeepShoppingForFauxFlorals'
 import SmallSpaceEntryWayFinds from './SmallSpaceEntryWayFinds'
