@@ -5,9 +5,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import SearchBar from "./SearchBar";
 import { FaArrowRight } from "react-icons/fa";
-
-
-import { Box, HStack } from "@chakra-ui/react";
+import AccountMenu from "./AccountMenu";
 // import { SearchIcon } from "@chakra-ui/icons";
 
 
@@ -27,12 +25,11 @@ export default function Header() {
           <SearchBar />
         </Flex>
         <Flex width={"30%"} gap={"20px"} justifyContent={"flex-end"}>
-            <Link href="#" fontWeight={"500"}><MdOutlineAccountCircle  _hover={{color:"#7c189f"}} size={30} />  Account</Link>
-            <Link href="#" fontWeight={"500"}><AiOutlineShoppingCart _hover={{color:"#7c189f"}} size={30}/>Cart</Link>
+          <Link href="#" fontWeight={"500"}><MdOutlineAccountCircle  _hover={{color:"#7c189f"}} size={30} />  Account  </Link>
+          <Link href="#" fontWeight={"500"} ><AiOutlineShoppingCart _hover={{color:"#7c189f" }} size={30}/>Cart</Link>
         </Flex>
       </Flex>
     </VStack>
-   
   );
 }
  

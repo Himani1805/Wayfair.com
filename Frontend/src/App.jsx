@@ -4,10 +4,11 @@ import Signup from "./pages/Signup"
 import Login from './pages/Login'
 import { Routes, Route } from 'react-router-dom'
 import Footer from "./components/Footer/Footer"
-import Main from "./components/MainSection/Main"
 import Navbar from "./components/Navbar/Navbar"
 import Logout from "./pages/Logout"
 import Dashboard from "./components/Dashboard/Banner"
+import Account from "./components/Header/AccountMenu"
+import MainSection from "./components/MainSection/MainSection"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
-      <Main/>
+      <MainSection/>
       <Footer/>
     </VStack>
   )

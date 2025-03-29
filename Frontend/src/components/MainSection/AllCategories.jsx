@@ -140,7 +140,7 @@ const categories = [
 
 export default function AllCategories() {
   return (
-    <Box p={8}>
+    <Box >
       <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={8}>
         {categories.map((section, idx) => (
           <Flex
@@ -164,7 +164,7 @@ export default function AllCategories() {
                     src={item.img}
                     alt="product"
                     borderRadius="md"
-                    objectFit="cover"
+                    objectFit="cover" 
                   />
                   {item.tag && (
                     <Badge
