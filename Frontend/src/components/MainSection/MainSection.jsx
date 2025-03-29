@@ -17,7 +17,7 @@ import { Flex } from '@chakra-ui/react'
 
 export default function MainSection() {
   return (
-    <Flex width={"92%"} border={"2px solid red"} mx={"auto"} flexDirection={"column"}>
+    <Flex width={"92%"}  mx={"auto"} flexDirection={"column"}>
       <AllCategories/>
       <DiningSaleUpto/>
       <RecommendedForYou/>
