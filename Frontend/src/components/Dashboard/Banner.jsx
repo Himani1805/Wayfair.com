@@ -3,6 +3,7 @@ import { VStack, Flex, Box, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FaLessThan } from "react-icons/fa6";
 import { FaGreaterThan } from "react-icons/fa6";
+import MainSection from "../MainSection/MainSection";
 
 export default function Banner(props) {
   const videos = [
@@ -39,6 +40,7 @@ export default function Banner(props) {
       {/* <Image
         src="https://assets.wfcdn.com/im/61708351/resize-h566-w2000%5Ecompr-r85/3098/309899371/unlock_your_next_home_gem%3A_earn_rewards_every_time_you_shop.__309899371.jpg"
       /> */}
+    <MainSection />
     </VStack>
   );
 }

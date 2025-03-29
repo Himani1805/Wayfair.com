@@ -15,7 +15,7 @@ export default function Login() {
     
     const url = `${backendUrl}/auth/login`
     try {
-      let res = await axios.post("http://localhost:8081/api/auth/login", data, {withCredentials:true});
+      let res = await axios.post(`${backendUrl}/auth/login`, data, {withCredentials:true});
       let result = await res.data;
       // const res = await axios.post(`${backendUrl}/auth/login`, data, { withCredentials: true });
       window.alert(result.message)

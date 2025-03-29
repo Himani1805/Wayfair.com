@@ -8,20 +8,20 @@ import Navbar from "./components/Navbar/Navbar"
 import Logout from "./pages/Logout"
 import Dashboard from "./components/Dashboard/Banner"
 import Account from "./components/Header/AccountMenu"
-import MainSection from "./components/MainSection/MainSection"
+
 
 function App() {
   return (
     <VStack width={"100%"}>
       <Header/>
-      <Navbar/>
-      <Dashboard/>
+      <Navbar/>   
       <Routes>
+         <Route path="/" element={<Dashboard  />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
+        <Route path="/logout" element={<Logout />} />        
+        {/* <Route path="/logout" element={<Logout />} /> */}
       </Routes>
-      <MainSection/>
       <Footer/>
     </VStack>
   )
