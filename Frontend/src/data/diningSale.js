@@ -1,16 +1,172 @@
-<Box>
-              <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />
-              <Link href="wayfairRewards">Cache 2-Door Accent Cabinet</Link>
-              <Heading>$139.83</Heading>
-              <Text>$425.00</Text>
-            </Box>
-const diningSale = [
-    {
-    image:"https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
-    link: "wayfairRewards",
-    linkText: "Cache 2-Door Accent Cabinet",
-    price: "$139.83",
-    mrp: "$425.00"
-    },
-
+export const diningSale = [
+  {
+    id: 1,
+    name: "Cache 2-Door Accent Cabinet",
+    brand: "WayfairRewards",
+    price: 139.83,
+    originalPrice: 425.00,
+    discount: 67,
+    image: "https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
+    extraImages: [
+      "https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
+      "https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
+      "https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
+    ],
+    description: "Beautiful and functional Cache 2-Door Accent Cabinet for your dining or living room.",
+    color: "Brown",
+    availableColors: ["#8B4513", "#D2B48C", "#A0522D", "#FFEBCD"],
+  },
+  {
+    id: 2,
+    name: "Artificial Mixed Peony and Hydrangea Bush",
+    brand: "WayfairRewards",
+    price: 12.99,
+    originalPrice: 40.43,
+    discount: 68,
+    image: "https://assets.wfcdn.com/im/99827312/resize-h400-w400%5Ecompr-r85/2732/27326133/Emma+Lou+Solid+Wood+Accent+Chest.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Lifelike Artificial Mixed Peony and Hydrangea Bush, perfect for home decor.",
+    color: "Multicolor",
+    availableColors: ["#FF69B4", "#FFC0CB", "#6A5ACD", "#32CD32"],
+  },
+  {
+    id: 3,
+    name: "Cherry Blossom Arrangement",
+    brand: "WayfairRewards",
+    price: 21.99,
+    originalPrice: 23.99,
+    discount: 8,
+    image: "https://assets.wfcdn.com/im/47074464/resize-h400-w400%5Ecompr-r85/3516/35163517/Warm+Solid+Wood+Accent+Cabinet.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Elegant Cherry Blossom Arrangement for a touch of sophistication in your home.",
+    color: "Pink",
+    availableColors: ["#FFC0CB", "#FFDAB9", "#FFE4E1", "#FF69B4"],
+  },
+  {
+    id: 4,
+    name: "Alani 20\" Artificial Peony Bunch",
+    brand: "WayfairRewards",
+    price: 39.00,
+    originalPrice: 64.92,
+    discount: 40,
+    image: "https://assets.wfcdn.com/im/40230321/resize-h400-w400%5Ecompr-r85/3094/309422000/Eldrin+Almond+Wood+Sofa%2F+Media+Console+Table.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Vibrant Alani Artificial Peony Bunch for home or event decor.",
+    color: "Peach",
+    availableColors: ["#FFDAB9", "#FF6347", "#FF4500", "#FA8072"],
+  },
+  {
+    id: 5,
+    name: "Poppy Arrangements",
+    brand: "WayfairRewards",
+    price: 13.99,
+    originalPrice: null, // No original price specified
+    discount: null, // Discount not calculable
+    image: "https://assets.wfcdn.com/im/65235432/resize-h400-w400%5Ecompr-r85/2886/288676860/Norvun+39.4%27%27+Console+Table.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Beautiful Poppy Arrangements to add charm to your space.",
+    color: "Red",
+    availableColors: ["#FF0000", "#FFA07A", "#FFC0CB", "#FFD700"],
+  },
+  {
+    id: 6,
+    name: "Cauldwell 26\" Artificial Calla Lily Stem",
+    brand: "WayfairRewards",
+    price: 39.98,
+    originalPrice: 62.10,
+    discount: 36, // Calculated discount
+    image: "https://assets.wfcdn.com/im/90788973/resize-h400-w400%5Ecompr-r85/5699/56997217/PETMAKER+Cat+House+–+Collapsible+Multipurpose+Small+Dog+or+Cat+Ottoman+with+Footrest,+Cushioned+Top,+and+Interior+Pillow.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Lifelike Calla Lily Stem, perfect for sophisticated decor.",
+    color: "White",
+    availableColors: ["#FFFFFF", "#FFE4C4", "#F5F5DC", "#FFF8DC"],
+  },
+  {
+    id: 7,
+    name: "Ultra Realistic Faux Silk Hydrangea Arrangement - for Home Decor",
+    brand: "WayfairRewards",
+    price: 34.99,
+    originalPrice: 75.99,
+    discount: 54, // Calculated discount
+    image: "https://assets.wfcdn.com/im/07593473/resize-h400-w400%5Ecompr-r85/2766/276641091/Adaiya+25.9%27%27+Console+Table.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Faux Silk Hydrangea Arrangement for elegant home decor.",
+    color: "Blue",
+    availableColors: ["#0000FF", "#ADD8E6", "#4682B4", "#5F9EA0"],
+  },
+  {
+    id: 8,
+    name: "Mixed Assortment Arrangement",
+    brand: "WayfairRewards",
+    price: 21.99,
+    originalPrice: null, // No original price specified
+    discount: null, // Discount not calculable
+    image: "https://assets.wfcdn.com/im/22855724/resize-h400-w400%5Ecompr-r85/2880/288079946/Bruce+Cabinet.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "A mixed assortment arrangement to brighten any space.",
+    color: "Multicolor",
+    availableColors: ["#FFD700", "#00FF00", "#FF69B4", "#FFFFE0"],
+  },
+  {
+    id: 9,
+    name: "40\" Artificial Cherry Blossom Spray",
+    brand: "WayfairRewards",
+    price: 27.99,
+    originalPrice: 45.45,
+    discount: 38, // Calculated discount
+    image: "https://assets.wfcdn.com/im/77520777/resize-h400-w400%5Ecompr-r85/1075/107559331/Accent+Chest.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Elegant 40\" Artificial Cherry Blossom Spray for enhancing home decor.",
+    color: "Pink",
+    availableColors: ["#FFC0CB", "#FF69B4", "#FFDAB9", "#FFE4E1"],
+  },
+  {
+    id: 10,
+    name: "Silk Dahlia Arrangement in Vase",
+    brand: "WayfairRewards",
+    price: 41.99,
+    originalPrice: 59.99,
+    discount: 30, // Calculated discount
+    image: "https://assets.wfcdn.com/im/26609663/resize-h400-w400%5Ecompr-r85/2703/270349687/Ryon+Upholstered+Ottoman.jpg",
+    extraImages: [
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+      "https://via.placeholder.com/50",
+    ],
+    description: "Beautiful Silk Dahlia Arrangement in Vase for an elegant touch.",
+    color: "Red",
+    availableColors: ["#FF0000", "#FFA07A", "#FF4500", "#FA8072"],
+  },
 ]

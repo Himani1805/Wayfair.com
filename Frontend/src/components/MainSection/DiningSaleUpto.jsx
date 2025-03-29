@@ -2,18 +2,30 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
   Link,
-  Text,
-  VStack,
   List
 } from "@chakra-ui/react";
 import React from "react";
-
+import ProductSlider from '../Common/ProductSlider'
+import { diningSale } from "../../data/diningSale";
 export default function DiningSaleUpto() {
+  
   return (
-    <VStack>
-      <Flex>
+    <Box>
+      <Flex justifyContent={"space-evenly"}>
+            <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>Dining Sale: up to 50% OFF</Heading>
+            <List.Root listStyleType={"none"} width={"5%"}>
+              <List.Item>
+                <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }} >See all</Link>
+              </List.Item>
+            </List.Root>
+          </Flex>
+      <ProductSlider products={diningSale} />
+    </Box> 
+  )
+}
+
+{/* <Flex>
         <Flex flexDirection={"column"}>
           <Flex justifyContent={"space-evenly"}>
             <Heading width={'100%'} textAlign={"left"} fontWeight={"700"} marginLeft={"25px"} paddingBottom={"15px"}>Dining Sale: up to 50% OFF</Heading>
@@ -22,8 +34,10 @@ export default function DiningSaleUpto() {
                 <Link href="myOrders" textDecoration={"underline"} color={"#7c189f"} _hover={{ textDecoration: "none", textDecorationColor: "purple.500" }} >See all</Link>
               </List.Item>
             </List.Root>
+           
           </Flex>
-          <Flex>
+         
+          {/* <Flex>
             <Box>
               <Image src="https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg" />
               <Link href="wayfairRewards">Cache 2-Door Accent Cabinet</Link>
@@ -94,10 +108,8 @@ export default function DiningSaleUpto() {
               <Heading>$41.99</Heading>
               <Text>was$59.99</Text>
             </Box>
-          </Flex>
-        </Flex>
+      //     </Flex> */}
+      //   </Flex>
 
-      </Flex>
-    </VStack>
-  )
-}
+      // </Flex>
+      // <ProductSlider products={diningSale}/> */}

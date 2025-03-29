@@ -15,10 +15,14 @@ import AllCategories from './AllCategories'
 import Banner from '../Dashboard/Banner'
 import { Flex } from '@chakra-ui/react'
 
+// import ProductSlider from '../Common/ProductSlider'
+import { diningSale } from '../../data/diningSale'
+
 export default function MainSection() {
   return (
     <Flex width={"92%"}  mx={"auto"} flexDirection={"column"}>
       <AllCategories/>
+      {/* <ProductSlider products={diningSale}/> */}
       <DiningSaleUpto/>
       <RecommendedForYou/>
       <HoursOnlyDealsOfTheDay/>
