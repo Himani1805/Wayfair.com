@@ -17,7 +17,7 @@ app.use(morgan('combined'));
 // app.use(cors());
 
 app.use(cors({
-    origin: "http://localhost:5173" ,// FRONTEND_URL,  // Replace with your frontend URL and port "http://localhost:5173"
+    origin: ["http://localhost:5173", "https://wayfair-com.onrender.com"], // FRONTEND_URL,  // Replace with your frontend URL and port "http://localhost:5173"
     credentials: true
   }));
   
