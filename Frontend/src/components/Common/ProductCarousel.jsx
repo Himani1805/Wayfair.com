@@ -4,7 +4,7 @@ import ProductCard from './ProductCard'; // Import your ProductCard component
 
 const ProductCarousel = ({ products }) => {
     const [startIndex, setStartIndex] = useState(0);
-    const visibleProductsCount = 6;
+    const visibleProductsCount = 5;
 
     const endIndex = (startIndex + visibleProductsCount) % products.length;
 
@@ -48,7 +48,7 @@ const ProductCarousel = ({ products }) => {
                 // height={"400px"}
                 >
                     {visibleProducts.map((product) => (
-                        <Box key={product.id} flex="0 0 calc(100% / 6)"  >
+                        <Box key={product.id} flex="0 0 calc(100% / 5)"  >
                             {/* Set each card to take equal width */}
                             <ProductCard product={product} />
                         </Box>
