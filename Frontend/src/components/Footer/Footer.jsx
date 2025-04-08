@@ -26,7 +26,7 @@ export default function Footer() {
       <Box>
         <hr
           style={{
-            width: "1510px",
+            width: "100%",
             border: "1px solid #dcdcdc",
             margin: "2px 0",
           }}
@@ -68,7 +68,7 @@ export default function Footer() {
       <Box>
         <hr
           style={{
-            width: "1510px",
+            width: "100%",
             border: "1px solid #dcdcdc",
             margin: "20px 0",
           }}
@@ -181,7 +181,7 @@ export default function Footer() {
       <Box>
         <hr
           style={{
-            width: "1510px",
+            width: "100%",
             border: "1px solid #dcdcdc",
             margin: "5px 0"
           }}
