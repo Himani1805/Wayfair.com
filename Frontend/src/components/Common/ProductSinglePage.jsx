@@ -1,9 +1,15 @@
 import React from "react";
-import { Box, Image, Text, Button, Flex, Select, Badge } from "@chakra-ui/react";
-// import { useCart } from "./CartContext";
+import {  useParams } from 'react-router-dom'
+import { Box, Image, Text, Button, Flex, Badge } from "@chakra-ui/react";
+import { diningSale } from "../../data/diningSale";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartProvider";
 
-const ProductSinglePage = ({ product }) => {
-  // const { addToCart } = useCart();
+const ProductSinglePage = () => {   // { product }
+  const { id } = useParams()
+  const { addToCart } = useContext(CartContext)
+  let [product] = diningSale.filter((item) => item.id == id)
+  console.log("Himani");
 
   return (
     <Box maxW="900px" mx="auto" p={5}>
@@ -17,7 +23,7 @@ const ProductSinglePage = ({ product }) => {
             ))}
           </Flex>
         </Box>
-        
+
         {/* Product Details */}
         <Box flex="2">
           <Text fontSize="2xl" fontWeight="bold">{product.name}</Text>
@@ -33,17 +39,6 @@ const ProductSinglePage = ({ product }) => {
               <Box key={idx} boxSize="20px" bg={clr} borderRadius="full" border="1px solid black" cursor="pointer" />
             ))}
           </Flex>
-
-          {/* Quantity Selection */}
-          {/* <Flex mt={4} align="center">
-            <Text fontWeight="bold" mr={2}>Quantity:</Text>
-            <Select w="100px">
-              {[1, 2, 3, 4, 5].map((q) => (
-                <option key={q} value={q}>{q}</option>
-              ))}
-            </Select>
-          </Flex> */}
-
           {/* Add to Cart Button */}
           <Button mt={5} colorScheme="purple" w="full" onClick={() => addToCart(product)}>
             Add to Cart

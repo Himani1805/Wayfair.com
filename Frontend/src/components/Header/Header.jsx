@@ -6,10 +6,14 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import SearchBar from "./SearchBar";
 import { FaArrowRight } from "react-icons/fa";
 import AccountMenu from "./AccountMenu";
+import AccountDropdown from "../Header/AccountDropdown";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartProvider";
 // import { SearchIcon } from "@chakra-ui/icons";
 
 
 export default function Header() {
+  const {cart} = useContext(CartContext)
   return (
     <VStack width={"100%"}>
       <Flex  width={"100%"} justifyContent={"space-between"} px={" 60px"} py={"4px"} background={"#7c189f"} >
@@ -25,10 +29,11 @@ export default function Header() {
           <SearchBar />
         </Flex>
         <Flex width={"30%"} gap={"20px"} justifyContent={"flex-end"}>
-          <Link href="#" fontWeight={"500"}><MdOutlineAccountCircle  _hover={{color:"#7c189f"}} size={30} />  Account  </Link>
-          <Link href="#" fontWeight={"500"} ><AiOutlineShoppingCart _hover={{color:"#7c189f" }} size={30}/>Cart</Link>
+          <Link href="/account" fontWeight={"500"}><MdOutlineAccountCircle  _hover={{color:"#7c189f"}} size={30} /></Link><AccountDropdown/>
+          <Link href="/cart" fontWeight={"500"} ><AiOutlineShoppingCart _hover={{color:"#7c189f" }} size={30}/>{cart.length}</Link>
         </Flex>
       </Flex>
+      
     </VStack>
   );
 }

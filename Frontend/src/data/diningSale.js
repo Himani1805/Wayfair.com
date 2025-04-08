@@ -3,8 +3,9 @@ export const diningSale = [
     id: 1,
     name: "Cache 2-Door Accent Cabinet",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 139.83,
-    originalPrice: 425.00,
+    mrp: 425.00,
     discount: 67,
     image: "https://assets.wfcdn.com/im/48655380/resize-h400-w400%5Ecompr-r85/1222/122209959/Cache+2-Door+Accent+Cabinet.jpg",
     extraImages: [
@@ -20,8 +21,9 @@ export const diningSale = [
     id: 2,
     name: "Artificial Mixed Peony and Hydrangea Bush",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 12.99,
-    originalPrice: 40.43,
+    mrp: 40.43,
     discount: 68,
     image: "https://assets.wfcdn.com/im/99827312/resize-h400-w400%5Ecompr-r85/2732/27326133/Emma+Lou+Solid+Wood+Accent+Chest.jpg",
     extraImages: [
@@ -37,8 +39,9 @@ export const diningSale = [
     id: 3,
     name: "Cherry Blossom Arrangement",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 21.99,
-    originalPrice: 23.99,
+    mrp: 23.99,
     discount: 8,
     image: "https://assets.wfcdn.com/im/47074464/resize-h400-w400%5Ecompr-r85/3516/35163517/Warm+Solid+Wood+Accent+Cabinet.jpg",
     extraImages: [
@@ -54,8 +57,9 @@ export const diningSale = [
     id: 4,
     name: "Alani 20\" Artificial Peony Bunch",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 39.00,
-    originalPrice: 64.92,
+    mrp: 64.92,
     discount: 40,
     image: "https://assets.wfcdn.com/im/40230321/resize-h400-w400%5Ecompr-r85/3094/309422000/Eldrin+Almond+Wood+Sofa%2F+Media+Console+Table.jpg",
     extraImages: [
@@ -71,8 +75,9 @@ export const diningSale = [
     id: 5,
     name: "Poppy Arrangements",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 13.99,
-    originalPrice: null, // No original price specified
+    mrp: 20.90, // No original price specified
     discount: null, // Discount not calculable
     image: "https://assets.wfcdn.com/im/65235432/resize-h400-w400%5Ecompr-r85/2886/288676860/Norvun+39.4%27%27+Console+Table.jpg",
     extraImages: [
@@ -88,8 +93,9 @@ export const diningSale = [
     id: 6,
     name: "Cauldwell 26\" Artificial Calla Lily Stem",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 39.98,
-    originalPrice: 62.10,
+    mrp: 62.10,
     discount: 36, // Calculated discount
     image: "https://assets.wfcdn.com/im/90788973/resize-h400-w400%5Ecompr-r85/5699/56997217/PETMAKER+Cat+House+–+Collapsible+Multipurpose+Small+Dog+or+Cat+Ottoman+with+Footrest,+Cushioned+Top,+and+Interior+Pillow.jpg",
     extraImages: [
@@ -103,10 +109,11 @@ export const diningSale = [
   },
   {
     id: 7,
-    name: "Ultra Realistic Faux Silk Hydrangea Arrangement - for Home Decor",
+    name: "Ultra Realistic Faux Silk.",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 34.99,
-    originalPrice: 75.99,
+    mrp: 75.99,
     discount: 54, // Calculated discount
     image: "https://assets.wfcdn.com/im/07593473/resize-h400-w400%5Ecompr-r85/2766/276641091/Adaiya+25.9%27%27+Console+Table.jpg",
     extraImages: [
@@ -122,8 +129,9 @@ export const diningSale = [
     id: 8,
     name: "Mixed Assortment Arrangement",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 21.99,
-    originalPrice: null, // No original price specified
+    mrp: 25.70, // No original price specified
     discount: null, // Discount not calculable
     image: "https://assets.wfcdn.com/im/22855724/resize-h400-w400%5Ecompr-r85/2880/288079946/Bruce+Cabinet.jpg",
     extraImages: [
@@ -139,8 +147,9 @@ export const diningSale = [
     id: 9,
     name: "40\" Artificial Cherry Blossom Spray",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 27.99,
-    originalPrice: 45.45,
+    mrp: 45.45,
     discount: 38, // Calculated discount
     image: "https://assets.wfcdn.com/im/77520777/resize-h400-w400%5Ecompr-r85/1075/107559331/Accent+Chest.jpg",
     extraImages: [
@@ -156,8 +165,9 @@ export const diningSale = [
     id: 10,
     name: "Silk Dahlia Arrangement in Vase",
     brand: "WayfairRewards",
+    url: "/product/dining",
     price: 41.99,
-    originalPrice: 59.99,
+    mrp: 59.99,
     discount: 30, // Calculated discount
     image: "https://assets.wfcdn.com/im/26609663/resize-h400-w400%5Ecompr-r85/2703/270349687/Ryon+Upholstered+Ottoman.jpg",
     extraImages: [

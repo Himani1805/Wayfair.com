@@ -6,8 +6,8 @@ import {
   List
 } from "@chakra-ui/react";
 import React from "react";
-import ProductSlider from '../Common/ProductSlider'
 import { diningSale } from "../../data/diningSale";
+import ProductCarousel from "../Common/ProductCarousel";
 export default function DiningSaleUpto() {
   
   return (
@@ -20,7 +20,7 @@ export default function DiningSaleUpto() {
               </List.Item>
             </List.Root>
           </Flex>
-      <ProductSlider products={diningSale} />
+        <ProductCarousel products={diningSale}/>
     </Box> 
   )
 }
