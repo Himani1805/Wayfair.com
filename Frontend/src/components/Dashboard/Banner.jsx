@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { VStack, Flex, Box, Image, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { FaLessThan } from "react-icons/fa6";
-import { FaGreaterThan } from "react-icons/fa6";
 import MainSection from "../MainSection/MainSection";
+import { PiLessThanBold } from "react-icons/pi";
+import { PiGreaterThanBold } from "react-icons/pi";
 
 export default function Banner(props) {
   const videos = [
-    "https://secure.img1-fg.wfcdn.com/dm/video/eaf924f3-968f-4e47-810c-da8f97235682/usca_diningsale_desktop.mp4",
-    "https://secure.img1-fg.wfcdn.com/dm/video/ce277938-1f00-43c8-80f0-12455bd10d36/wfus_storage&org_entryway_test_homepage_hero_desktop_v3%20(2).mp4",
-    "https://secure.img1-fg.wfcdn.com/dm/video/f2a2b9c1-e0d6-48d8-bb38-af6cd9102374/usca_72hrclearout_desktop.mp4",
-    "https://secure.img1-fg.wfcdn.com/dm/video/df783d80-6bc6-4c03-9f79-183035209897/outdoor_newarrivals_homepage_desktop_hero_01.mp4"
+    "https://res.cloudinary.com/dgbymqjtk/video/upload/v1744112845/usca_diningsale_desktop_idfu5k.mp4",
+    "https://res.cloudinary.com/dgbymqjtk/video/upload/v1744112823/wfus_storage_org_entryway_test_homepage_hero_desktop_sivg9i.mp4",
+    "https://res.cloudinary.com/dgbymqjtk/video/upload/v1744112822/usca_72hrclearout_desktop_jeffgd.mp4",
+    "https://res.cloudinary.com/dgbymqjtk/video/upload/v1744112822/usca_72hrclearout_desktop_jeffgd.mp4",
+    "https://res.cloudinary.com/dgbymqjtk/video/upload/v1744112839/wfus_0317-springcyberweek-launch_hero_desktop_v3_kumnzs.mp4"
   ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -31,8 +32,8 @@ export default function Banner(props) {
       </Box>
 
       <Flex gap={4} mt={4}>
-        <Button borderRadius={"50%"} onClick={prevVideo} background={"white"} border={"2px solid #7c189f"} position={"absolute"} left={"2%"} top={"2%"}><FaLessThan color="#9e5ed7"/></Button>
-        <Button borderRadius={"50%"} onClick={nextVideo} background={"white"} border={"2px solid #7c189f"} position={"absolute"} right={"2%"} top={"2%"}><FaGreaterThan color="#9e5ed7" /></Button>
+        <Button borderRadius={"50%"} onClick={prevVideo} background={"white"} border={"2px solid #7c189f"} position={"absolute"} left={"2%"} top={"2%"}><PiLessThanBold color="#9e5ed7"/></Button>
+        <Button borderRadius={"50%"} onClick={nextVideo} background={"white"} border={"2px solid #7c189f"} position={"absolute"} right={"2%"} top={"2%"}><PiGreaterThanBold color="#9e5ed7" /></Button>
       </Flex>
       <Box>
         <Link to={"#"}>

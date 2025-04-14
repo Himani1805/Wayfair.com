@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Button, Flex } from '@chakra-ui/react';
 import ProductCard from './ProductCard'; // Import your ProductCard component
+import { PiLessThanBold } from "react-icons/pi";
+import { PiGreaterThanBold } from "react-icons/pi";
 
 const ProductCarousel = ({ products }) => {
     const [startIndex, setStartIndex] = useState(0);
@@ -29,13 +31,17 @@ const ProductCarousel = ({ products }) => {
                 {/* Previous Button */}
                 <Button
                     position="absolute"
-                    top="30%"
+                    top="40%"
                     left="10"
                     transform="translateY(-50%)"
                     onClick={handlePrevious}
                     zIndex="10"
+                    borderRadius="50%"
+                    background="white"
+                    border="2px solid #7c189f"
                 >
-                    -
+                   <PiLessThanBold color="#9e5ed7"/>
+                   {/* borderRadius={"50%"} onClick={prevVideo} background={"white"} border={"2px solid #7c189f"} position={"absolute"} left={"2%"} top={"2%"} */}
                 </Button>
 
                 {/* Product Cards */}
@@ -58,13 +64,16 @@ const ProductCarousel = ({ products }) => {
                 {/* Next Button */}
                 <Button
                     position="absolute"
-                    top="30%"
+                    top="40%"
                     right="10%"
                     transform="translateY(-50%)"
                     onClick={handleNext}
                     zIndex="10"
+                    borderRadius="50%"
+                    background="white"
+                    border="2px solid #7c189f"
                 >
-                    +
+                   <PiGreaterThanBold color="#9e5ed7" />
                 </Button>
             </Flex>
         </Box>

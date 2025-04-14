@@ -9,7 +9,7 @@ const ProductPage = () => {
   };
 
   return (
-    <Box maxW="600px" mx="auto" p="4">
+    <Box maxW="600px" mx="auto" p="4" >
       <Image 
         src="https://via.placeholder.com/300" 
         alt="Product Image" 

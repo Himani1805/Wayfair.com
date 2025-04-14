@@ -33,8 +33,8 @@ export default function Footer() {
         />
       </Box>
       <Flex width={"100%"} flexDirection={"column"}>
-        <Box>
-          <Image src="src\assets\images\attention,_waybors!_dDon't_miss_exclusive_deals_and_perks_on_the_app._download_the_app.jpg" />
+        <Box  borderTop= {"1.5px solid #ccc"} paddingTop={"10px"}>
+          <Image src="https://res.cloudinary.com/dgbymqjtk/image/upload/v1744112816/FooterPic_r3tvqb.webp" />
         </Box>
         <Flex justifyContent={"center"} paddingTop={"50px"} gap={"20px"} textAlign={"center"}>
           <Box lineHeight={"60px"}>
